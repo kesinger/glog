@@ -47,14 +47,6 @@ include (DetermineGflagsNamespace)
 
 set (CMAKE_THREAD_PREFER_PTHREAD 1)
 
-if (WITH_GFLAGS)
-  find_package (gflags)
-
-  if (gflags_FOUND)
-    set (HAVE_LIB_GFLAGS 1)
-    determine_gflags_namespace (gflags_NAMESPACE)
-  endif (gflags_FOUND)
-endif (WITH_GFLAGS)
 
 if (WITH_THREADS)
   find_package (Threads)
